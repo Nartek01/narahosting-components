@@ -1,0 +1,9 @@
+advanced-custom-fields-pro
+akismet
+my-first-block
+*package-lock.json
+*package.json
+*editorconfig
+*src/
+*readme.txt
+/*/.gitignore
