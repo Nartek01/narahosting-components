@@ -1,0 +1,26 @@
+name: Deploy to Dev Server from Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Up SSH Key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H naras-blade >> ~/.ssh/known_hosts
+
+      - name: Test SSH Connection
+        run: ssh -T -o StrictHostKeyChecking=no nara@naras-blade
+
+      - name: Deploy to Dev Server
+        run: |
+          ssh -o StrictHostKeyChecking=no nara@naras-blade 'cd /home/nara/wordpress_dev/plugins && git pull origin staging'
