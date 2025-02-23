@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "narahosting/narahosting-hero-block",
+  "version": "0.1.0",
+  "title": "Narahosting Hero Block",
+  "category": "widgets",
+  "icon": "superhero",
+  "description": "A header block with a background image,text and a button.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "backgroundImage": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    },
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "View Services"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "textdomain": "narahosting-hero-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

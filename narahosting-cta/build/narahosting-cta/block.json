@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "narahosting/narahosting-cta",
+  "version": "0.1.0",
+  "title": "Narahosting Cta",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "A call-to-action block for Narahosting",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "narahosting-cta",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Stay updated with Narahosting"
+    },
+    "subHeading": {
+      "type": "string",
+      "default": "GAMING INSIGHTS UNLEASHED"
+    },
+    "description": {
+      "type": "string",
+      "default": "Narahosting, based in Jokkmokk, SE, dives deep into the gaming world by providing insightful game reviews and timely updates on patch notes. Our blog keeps you informed about the latest game changes, server performance enhancements, and essential hosting tips tailored for gamers. With a commitment to enhancing your gaming experience, Narahosting empowers you to stay ahead of the curve in this fast-paced gaming landscape."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Get in touch"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
