@@ -1,5 +1,8 @@
 # About
-So... I have a site (site.narahosting.cc) and I want to develop custom components for the site's Gutenberg Blocks, The blocks source code is only store in my pc locally. The stuff that goes into the staging site and the prod site are only the /build/ folder and the .php file that loads the plugins.
+I’m developing custom Gutenberg block components for site.narahosting.cc.
+The block source code is organized within this repository and maintained locally.
+
+Only the /build/ directory and the main .php loader file are deployed to the staging and production environments.
 
 # narahosting-components
 A collection of plugin containing various Gutenberg Block Components for my narahosting theme based of twentytwentyfour.
