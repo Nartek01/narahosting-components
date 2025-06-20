@@ -1,0 +1,49 @@
+@use "../../style.scss" as global;
+
+.narahosting-cta {
+
+    &-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+
+    &-image {
+        height: 500px;
+        background-size: contain;
+        width: auto;
+        background-position: center;
+    }
+
+    &-button {
+        text-decoration: none;
+        color: global.$accent-dark-color;
+
+        &:hover {
+            color: global.$primary-color;
+            transition: 600ms;
+        }
+    }
+
+    &-subheading {
+        color: global.$primary-color;
+
+        &h2 {
+            font-size: global.$font-xl;
+        }
+    }
+
+    &-content {
+        margin: 3vh 0;
+    }
+}
+
+@media (max-width: global.$breakpoint-tablet) {
+    .narahosting-cta {
+        &-block {
+            display: flex !important;
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@use "../../style.scss" as global;
+
+* {
+	font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.narahosting-primary-button:hover {
+	background-color: global.$primary-color;
+	transition: 600ms;
+}
