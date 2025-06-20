@@ -1,15 +1,49 @@
-.wp-smtp-block {
-	background-color: #e0e0e0;
-	padding: 20px;
-	margin-top: 15px;
-	border-radius: 10px;
+@use "../../style.scss" as global;
+
+.narahosting-cta {
+
+    &-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+
+    &-image {
+        height: 500px;
+        background-size: contain;
+        width: auto;
+        background-position: center;
+    }
+
+    &-button {
+        text-decoration: none;
+        color: global.$accent-dark-color;
+
+        &:hover {
+            color: global.$primary-color;
+            transition: 600ms;
+        }
+    }
+
+    &-subheading {
+        color: global.$primary-color;
+
+        &h2 {
+            font-size: global.$font-xl;
+        }
+    }
+
+    &-content {
+        margin: 3vh 0;
+    }
 }
 
-.wp-smtp-block h3 {
-	font-size: 1.5em;
-	color: #222;
-}
-
-.wp-smtp-block p {
-	color: #555;
+@media (max-width: global.$breakpoint-tablet) {
+    .narahosting-cta {
+        &-block {
+            display: flex !important;
+            flex-direction: column;
+            gap: 0;
+        }
+    }
 }

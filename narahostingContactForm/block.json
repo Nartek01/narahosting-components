@@ -1,25 +1,70 @@
 {
-	"apiVersion": 2,
-	"name": "narahosting/smtp-mail",
-	"title": "WP SMTP Mail Settings",
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "narahosting/narahosting-contact-form",
+	"version": "0.1.0",
+	"title": "Narahosting Contact Form",
 	"category": "widgets",
-	"icon": "email",
-	"description": "A block for configuring WP SMTP Mail plugin settings.",
+	"icon": "megaphone",
+	"description": "A contact form block for Narahosting",
+	"example": {},
 	"supports": {
 		"html": false
 	},
+	"textdomain": "narahosting-contact-form",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
 	"attributes": {
-		"emailTo": {
+		"heading": {
+			"type": "string",
+			"default": "Get in Touch"
+		},
+		"subHeading": {
+			"type": "string",
+			"default": "CONTACT US"
+		},
+		"description": {
+			"type": "string",
+			"default": "Have questions avout our gaming hosting servcies? Send us a message and we'll get back to you as soon as possible."
+		},
+		"contactFormId": {
 			"type": "string",
 			"default": ""
 		},
-		"smtpServer": {
+		"contactFormTitle": {
 			"type": "string",
 			"default": ""
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"formFields": {
+			"type": "object",
+			"default": {
+				"name": {
+					"label": "Name",
+					"type": "text",
+					"required": true
+				},
+				"email": {
+					"label": "Email",
+					"type": "email",
+					"required": true
+				},
+				"subject": {
+					"label": "Subject",
+					"type": "text",
+					"required": true
+				},
+				"message": {
+					"label": "Your Message",
+					"type": "textare",
+					"required": true
+				}
+			}
 		}
-	},
-	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/editor.css",
-	"style": "file:./build/style.css",
-	"render": "file:./render.php"
+	}
 }
