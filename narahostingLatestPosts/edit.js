@@ -1,11 +1,4 @@
 /**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
-
-/**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
  *
@@ -30,14 +23,12 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 
-import { useSelect } from '@wordpress/data';
-
 export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
 			<p>
 				This block fetches 3 latest published posts. see
-				"narahostingLatestPosts" block for modifications.
+				&ldquo;narahostingLatestPosts&rdquo; block for modifications.
 			</p>
 		</div>
 	);

@@ -1,7 +1,7 @@
 @use "../../style.scss" as global;
 
 .narahosting-hero {
-	
+
 	&-block {
 		min-height: 33rem;
 		display: flex;
@@ -44,6 +44,7 @@
 @media (max-width: global.$breakpoint-tablet) {
 
 	.narahosting-hero {
+
 		&-title {
 			font-size: global.$font-xm;
 		}

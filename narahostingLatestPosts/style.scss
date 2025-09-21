@@ -25,9 +25,12 @@
 		width: 300px;
 		min-height: 300px;
 		margin-bottom: 20px;
+		max-width: 300px;
 
 		img {
 			width: 100%;
+			max-width: fill-available;
+			max-width: -webkit-fill-available;
 		}
 
 		a {
@@ -54,22 +57,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	h3 {
 		color: global.$primary-color;
 	}
 }
 
-.post-item {
-	max-width: 300px;
-}
-
-.post-item img {
-	max-width: fill-available;
-	max-width: -webkit-fill-available;
-}
-
 @media (max-width: global.$breakpoint-tablet) {
-  
+
 	.posts-list {
 		flex-direction: column;
 		align-items: center;

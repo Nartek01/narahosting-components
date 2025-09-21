@@ -1,11 +1,4 @@
 /**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
-
-/**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
  *
@@ -33,11 +26,11 @@ export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
 			<h1 className="narahosting-title">NARAHOSTING</h1>
-			<ul class="menu-items">
-				<li class="menu-single-item">Home</li>
-				<li class="menu-single-item">About</li>
-				<li class="menu-single-item">Service</li>
-				<li class="menu-single-item">Blog</li>
+			<ul className="menu-items">
+				<li className="menu-single-item">Home</li>
+				<li className="menu-single-item">About</li>
+				<li className="menu-single-item">Service</li>
+				<li className="menu-single-item">Blog</li>
 			</ul>
 		</div>
 	);

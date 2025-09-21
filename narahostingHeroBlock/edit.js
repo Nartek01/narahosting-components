@@ -99,10 +99,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				<div className="narahosting-hero-content">
 					<RichText
 						tagName="h2"
-						placeholder={ __(
-							'Block Title...',
-							'narahosting-hero'
-						) }
+						placeholder={ __( 'Block Title…', 'narahosting-hero' ) }
 						value={ title }
 						onChange={ ( val ) => setAttributes( { title: val } ) }
 						className="narahosting-hero-title"
@@ -110,7 +107,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					<RichText
 						tagName="p"
 						placeholder={ __(
-							'Block Subtitle...',
+							'Block Subtitle…',
 							'narahosting-hero'
 						) }
 						value={ subtitle }

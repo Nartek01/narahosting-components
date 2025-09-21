@@ -1,6 +1,5 @@
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { TextControl, PanelBody } from '@wordpress/components';
-import { InspectorControls } from '@wordpress/block-editor';
 
 export default function Edit( { attributes, setAttributes } ) {
 	const { emailTo, smtpServer } = attributes;
