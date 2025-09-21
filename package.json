@@ -1,0 +1,18 @@
+{
+  "name": "narahosting-components",
+  "version": "1.0.0",
+  "description": "Custom WordPress blocks for narahosting theme",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:css": "wp-scripts lint-style",
+    "lint:css:fix": "wp-scripts lint-style --fix",
+    "lint:js": "wp-scripts lint-js",
+    "lint:js:fix": "wp-scripts lint-js --fix",
+    "lint:all": "yarn lint:css && yarn lint:js",
+    "lint:all:fix": "yarn lint:css:fix && yarn lint:js:fix"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0"
+  }
+}
