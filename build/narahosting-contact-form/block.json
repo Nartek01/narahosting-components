@@ -1,0 +1,25 @@
+{
+	"apiVersion": 2,
+	"name": "narahosting/smtp-mail",
+	"title": "WP SMTP Mail Settings",
+	"category": "widgets",
+	"icon": "email",
+	"description": "A block for configuring WP SMTP Mail plugin settings.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"emailTo": {
+			"type": "string",
+			"default": ""
+		},
+		"smtpServer": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/editor.css",
+	"style": "file:./build/style.css",
+	"render": "file:./render.php"
+}

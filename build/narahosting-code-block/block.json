@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "narahosting/narahosting-code-block",
+	"version": "0.1.0",
+	"title": "Narahosting Code Block",
+	"category": "widgets",
+	"icon": "megaphone",
+	"description": "A call-to-action block for Narahosting",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "narahosting-code-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"code": {
+			"type": "string",
+			"default": "Hello Code!"
+		}
+	}
+}
