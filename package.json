@@ -13,6 +13,7 @@
     "lint:all:fix": "yarn lint:css:fix && yarn lint:js:fix"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^27.0.0"
+    "@wordpress/scripts": "^27.0.0",
+    "copy-webpack-plugin": "^13.0.1"
   }
 }
