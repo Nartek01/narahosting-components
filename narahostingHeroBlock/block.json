@@ -6,7 +6,7 @@
 	"title": "Narahosting Hero Block",
 	"category": "widgets",
 	"icon": "superhero",
-	"description": "A header block with a background image,text and a button.",
+	"description": "A header block with a background image, text and a button.",
 	"example": {},
 	"supports": {
 		"html": false,

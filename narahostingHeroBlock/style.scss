@@ -1,15 +1,14 @@
 @use "../style.scss" as global;
 
 .narahosting-hero {
-
 	&-block {
 		min-height: 33rem;
 		display: flex;
 		align-items: center;
 		background-size: cover;
 		background-position: center center;
-		padding: 60px 0;
-		margin-bottom: 100px;
+		padding: 3.75rem 0;
+		margin-bottom: 6.25rem;
 	}
 
 	&-content {
@@ -37,16 +36,13 @@
 		text-decoration: none;
 		border-radius: 4px;
 		font-weight: 700;
-		font-weight: 400;
 	}
-}
-
-@media (max-width: global.$breakpoint-tablet) {
-
-	.narahosting-hero {
-
-		&-title {
-			font-size: global.$font-xm;
+	
+	@media (max-width: global.$breakpoint-tablet) {
+		.narahosting-hero {
+			&-title {
+				font-size: global.$font-xm;
+			}
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
-	const { backgroundImage, title, subtitle, buttonText, buttonURL } =
+	const { backgroundImage, title, subtitle, buttonText, buttonUrl } =
 		attributes;
 
 	const blockProps = useBlockProps.save( {
@@ -26,7 +26,7 @@ export default function save( { attributes } ) {
 					className="narahosting-hero-subtitle"
 					value={ subtitle }
 				/>
-				<a className="narahosting-hero-button" href={ buttonURL }>
+				<a className="narahosting-hero-button" href={ buttonUrl }>
 					{ buttonText }
 				</a>
 			</div>
