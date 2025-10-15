@@ -15,5 +15,10 @@
   "devDependencies": {
     "@wordpress/scripts": "^27.0.0",
     "copy-webpack-plugin": "^13.0.1"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "pnpm": "^10.18.3",
+    "run": "^1.5.0"
   }
 }
