@@ -1,11 +1,11 @@
 @use "../style.scss" as global;
 
 .narahosting-cta {
-
 	&-block {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 100px;
+		padding: 0 20%;
 	}
 
 	&-image {
@@ -17,35 +17,43 @@
 
 	&-button {
 		text-decoration: none;
-		color: global.$accent-dark-color;
+		color: global.$accent-light-color;
+		background-color: global.$accent-dark-color;
+		padding: 1rem;
+		margin: 1rem 0rem;
+		border-radius: 32px;
 
 		&:hover {
 			color: global.$primary-color;
-			transition: 600ms;
+			transition: color 600ms;
 		}
 	}
 
 	&-subheading {
 		color: global.$primary-color;
 
-		&h2 {
+		& h2 {
 			font-size: global.$font-xl;
 		}
 	}
 
 	&-content {
+		& p {
+			margin-bottom: 3rem;
+		}
+		
 		margin: 3vh 0;
 	}
-}
 
-@media (max-width: global.$breakpoint-tablet) {
+	// Media query for .narahosting-cta
+	@media (max-width: global.$breakpoint-tablet) {
 
-	.narahosting-cta {
-
-		&-block {
-			display: flex !important;
-			flex-direction: column;
-			gap: 0;
+		.narahosting-cta {
+			&-block {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
 		}
 	}
 }
