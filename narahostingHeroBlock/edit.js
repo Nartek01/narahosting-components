@@ -10,7 +10,7 @@ import { PanelBody, Button, TextControl } from '@wordpress/components';
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { backgroundImage, title, subtitle, buttonText, buttonURL } =
+	const { backgroundImage, title, subtitle, buttonText, buttonUrl } =
 		attributes;
 
 	const blockProps = useBlockProps( {
@@ -37,7 +37,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			{ /* SIDEBAR CONTROLS */ }
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Hero Settings', 'narahosting-hero' ) }
+					title={ __( 'Hero Settings', 'narahosting-hero-block' ) }
 					initialOpen={ true }
 				>
 					<MediaUploadCheck>
@@ -49,11 +49,11 @@ export default function Edit( { attributes, setAttributes } ) {
 									{ backgroundImage
 										? __(
 												'Change Background Image',
-												'narahosting-hero'
+												'narahosting-hero-block'
 										  )
 										: __(
 												'Select Background Image',
-												'narahosting-hero'
+												'narahosting-hero-block'
 										  ) }
 								</Button>
 							) }
@@ -67,28 +67,28 @@ export default function Edit( { attributes, setAttributes } ) {
 						>
 							{ __(
 								'Remove Background Image',
-								'narahosting-hero'
+								'narahosting-hero-block'
 							) }
 						</Button>
 					) }
 				</PanelBody>
 
 				<PanelBody
-					title={ __( 'Button Settings', 'narahosting-hero' ) }
+					title={ __( 'Button Settings', 'narahosting-hero-block' ) }
 					initialOpen={ false }
 				>
 					<TextControl
-						label={ __( 'Button Text', 'narahosting-hero' ) }
+						label={ __( 'Button Text', 'narahosting-hero-block' ) }
 						value={ buttonText }
 						onChange={ ( val ) =>
 							setAttributes( { buttonText: val } )
 						}
 					/>
 					<TextControl
-						label={ __( 'Button URL', 'narahosting-hero' ) }
-						value={ buttonURL }
+						label={ __( 'Button URL', 'narahosting-hero-block' ) }
+						value={ buttonUrl }
 						onChange={ ( val ) =>
-							setAttributes( { buttonURL: val } )
+							setAttributes( { buttonUrl: val } )
 						}
 					/>
 				</PanelBody>
@@ -99,7 +99,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				<div className="narahosting-hero-content">
 					<RichText
 						tagName="h2"
-						placeholder={ __( 'Block Title…', 'narahosting-hero' ) }
+						placeholder={ __( 'Block Title…', 'narahosting-hero-block' ) }
 						value={ title }
 						onChange={ ( val ) => setAttributes( { title: val } ) }
 						className="narahosting-hero-title"
@@ -108,7 +108,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						tagName="p"
 						placeholder={ __(
 							'Block Subtitle…',
-							'narahosting-hero'
+							'narahosting-hero-block'
 						) }
 						value={ subtitle }
 						onChange={ ( val ) =>
@@ -116,9 +116,9 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 						className="narahosting-hero-subtitle"
 					/>
-					<a className="narahosting-hero-button" href={ buttonURL }>
+					<span className="narahosting-hero-button" href={ buttonUrl }>
 						{ buttonText }
-					</a>
+					</span>
 				</div>
 			</div>
 		</>
