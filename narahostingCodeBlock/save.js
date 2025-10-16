@@ -26,9 +26,9 @@ export default function save( { attributes } ) {
 
 	return (
 		<div { ...blockProps }>
-			<div className="narahosting-code-block-content">
-				<RichText.Content tagName="pre" value={ code } />
-			</div>
+			<pre className="narahosting-code-block-content">
+				<RichText.Content tagName="code" value={ code } />
+			</pre>
 		</div>
 	);
 }
